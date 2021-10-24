@@ -16,7 +16,7 @@ void loop()
 
   // Add time in seconds since Jan 1, 1970
   c += "\", \"Time\": \"";
-  time_t t = time(nullptr);
+  time_t t = now();
   c += t;
   
   sensors.requestTemperatures(); 
