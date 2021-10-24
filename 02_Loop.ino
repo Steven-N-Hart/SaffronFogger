@@ -8,21 +8,21 @@ void loop()
   {
     mqtt->mqttConnect();
   }
-  
+
+ 
   delay(10); // <- fixes some issues with WiFi stability
   
   String c = "{ \"IPAdd\": \"";
   c += WiFi.localIP().toString().c_str();
 
   // Add time in seconds since Jan 1, 1970
-  c += "\", \"Time\": \"";
-  time_t t = now();
-  c += t;
+  c += "\", \"Time\": ";
+  c += time(nullptr);
   
   sensors.requestTemperatures(); 
   waterTemp = sensors.getTempCByIndex(0);
   
-  c += "\", \"WaterTemp\": ";
+  c += ", \"WaterTemp\": ";
   c += waterTemp;
   
   delay(100);
@@ -72,6 +72,6 @@ void loop()
     lastMillis = millis();
     publishTelemetry(c);
   }
-     Serial.println(c);
-  }
+  Serial.println(c);
+ 
 }

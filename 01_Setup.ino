@@ -31,4 +31,6 @@ void setup()
   {
       delay(10);
   }
+  Serial.print("Beginning time is ");
+  Serial.println(time(nullptr));
 }
