@@ -30,7 +30,7 @@ if(dhtCount ==1){
 
   // Check if any reads failed and exit early (to try again).
   if (isnan(h1) || isnan(t1) || isnan(f1)) {
-    Serial.println("Failed to read from DHT sensor1!");
+  //  Serial.println("Failed to read from DHT sensor1!");
     return 0.000;
   }
   
@@ -71,7 +71,7 @@ if(dhtCount ==2){
 
   // Check if any reads failed and exit early (to try again).
   if (isnan(h2) || isnan(t2) || isnan(f2)) {
-    Serial.println("Failed to read from DHT sensor2!");
+  // Serial.println("Failed to read from DHT sensor2!");
     return 0.000;
   }
   

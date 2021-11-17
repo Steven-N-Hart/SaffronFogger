@@ -60,14 +60,9 @@ void loop()
   c += fogger_humid_off;
   c += ", \"fogger_humid_on\": ";
   c += fogger_humid_on;
-  c += ", \"max_fogger_on_cycles\": ";
-  c += max_fogger_on_cycles;
-  c += ", \"fogger_on_time_per_cycle\": ";
-  c += fogger_on_time_per_cycle;
-
   
   c += " }";
-
+  
   // We can iterate through above as much as we want, 
   // but we want to limit how frequently we report our metrics
   if (millis() - lastMillis > updateTime_ms)

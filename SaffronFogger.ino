@@ -1,10 +1,11 @@
 // Globals
-int updateTime_ms = 600000;
+int updateTime_ms = 60000;
 // e.g. 70 = 70% Relative humidity
 double fogger_humid_on = 70; 
 double fogger_humid_off = 80;
 int max_fogger_on_cycles = 5;
 int fogger_on_time_per_cycle = 30000;
+
 // Time
 #include <TimeLib.h>
 #include <time.h>

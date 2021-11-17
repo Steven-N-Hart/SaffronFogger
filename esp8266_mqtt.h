@@ -120,12 +120,6 @@ void messageReceivedAdvanced(MQTTClient *client, char topic[], char bytes[], int
   if (length > 0){
     Serial.printf("incoming: %s - %s\n", topic, bytes);
     parseMessage(bytes);
-    Serial.print('updateTime_ms: ');
-    Serial.print(updateTime_ms);
-    Serial.print('fogger_humid_off: ');
-    Serial.print(fogger_humid_off);
-    Serial.print('fogger_humid_on: ');
-    Serial.print(fogger_humid_on);
     
   } else {
     Serial.printf("0\n"); // Success but no message
