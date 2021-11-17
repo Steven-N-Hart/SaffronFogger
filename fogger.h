@@ -13,7 +13,7 @@ void turnonfog(double hbot, double htop)
           digitalWrite(LED_BUILTIN, LOW);
           delay(30);
           digitalWrite(LED_BUILTIN, HIGH);
-          delay(30); 
+          delay(fogger_on_time_per_cycle); 
           float htop = getTemp("h", 1);
           float hbot = getTemp("h", 2);
           x = min(hbot, htop);
@@ -22,7 +22,7 @@ void turnonfog(double hbot, double htop)
           Serial.print(x);
           Serial.print(", ");
           Serial.println(i);   
-          if (i > max_fogger_on_ms)
+          if (i > max_fogger_on_cycles)
           {
             break;
           }

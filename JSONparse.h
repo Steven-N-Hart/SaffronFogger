@@ -22,8 +22,10 @@ void parseMessage(char json[])
   if (myObject.hasOwnProperty("fogger_humid_on")) {
     fogger_humid_on = myObject["fogger_humid_on"];
   }
-  if (myObject.hasOwnProperty("max_fogger_on_ms")) {
-    max_fogger_on_ms = myObject["max_fogger_on_ms"];
+  if (myObject.hasOwnProperty("max_fogger_on_cycles")) {
+    max_fogger_on_cycles = myObject["max_fogger_on_cycles"];
   }
-    
+  if (myObject.hasOwnProperty("fogger_on_time_per_cycle")) {
+    max_fogger_on_cycles = myObject["fogger_on_time_per_cycle"];
+  }    
 }
